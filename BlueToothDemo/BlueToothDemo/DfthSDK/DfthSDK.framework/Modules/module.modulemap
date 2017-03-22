@@ -1,0 +1,6 @@
+framework module DfthSDK {
+  umbrella header "DfthSDK.h"
+
+  export *
+  module * { export * }
+}
