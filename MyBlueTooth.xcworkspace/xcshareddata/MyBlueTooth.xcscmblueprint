@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8d308589-d965-9f4a-9254-cdb88a5d3d85++3153",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "8d308589-d965-9f4a-9254-cdb88a5d3d85++3153" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8d308589-d965-9f4a-9254-cdb88a5d3d85++3153" : 9223372036854775807,
+    "AB7619202D0D89813ECB2FE4684ABBD7824F5AA7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "375C5C63-A30C-41A4-B59B-710851CE0ED8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8d308589-d965-9f4a-9254-cdb88a5d3d85++3153" : "MyBlueTooth\/",
+    "AB7619202D0D89813ECB2FE4684ABBD7824F5AA7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MyBlueTooth",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MyBlueTooth.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.1.30\/svn\/Software",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8d308589-d965-9f4a-9254-cdb88a5d3d85++3153"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tommygao\/IOS_DfthSDKDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AB7619202D0D89813ECB2FE4684ABBD7824F5AA7"
+    }
+  ]
+}
