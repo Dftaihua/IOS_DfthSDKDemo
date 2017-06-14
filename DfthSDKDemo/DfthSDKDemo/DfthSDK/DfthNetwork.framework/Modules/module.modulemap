@@ -1,0 +1,6 @@
+framework module DfthNetwork {
+  umbrella header "DfthNetwork.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,18 @@
+//
+//  DfthSDKDemo.pch
+//  DfthSDKDemo
+//
+//  Created by yue gao on 2017/3/23.
+//  Copyright © 2017年 yue gao. All rights reserved.
+//
+
+#ifndef DfthSDKDemo_pch
+#define DfthSDKDemo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <DfthSDK/DfthSDK.h>
+#import "GlobleData.h"
+
+#define ADDING_NET_MODEL
+#endif /* DfthSDKDemo_pch */
