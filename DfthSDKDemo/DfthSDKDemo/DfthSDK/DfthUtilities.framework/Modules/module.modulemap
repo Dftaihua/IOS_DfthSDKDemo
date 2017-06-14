@@ -1,0 +1,6 @@
+framework module DfthUtilities {
+  umbrella header "DfthUtilities.h"
+
+  export *
+  module * { export * }
+}
