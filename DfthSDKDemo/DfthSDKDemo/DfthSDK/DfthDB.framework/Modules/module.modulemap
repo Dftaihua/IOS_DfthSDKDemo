@@ -1,0 +1,6 @@
+framework module DfthDB {
+  umbrella header "DfthDB.h"
+
+  export *
+  module * { export * }
+}
