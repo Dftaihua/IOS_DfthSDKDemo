@@ -10,8 +10,8 @@
 #import "DfthDeviceConstants.h"
 #import "DfthBlocks.h"
 #import "DfthTask.h"
-#import "DfthBpData.h"
-#import "DfthEcgRecord.h"
+
+
 #import "DfthBluetoothStateDelegate.h"
 
 @interface DfthSDKManager : NSObject

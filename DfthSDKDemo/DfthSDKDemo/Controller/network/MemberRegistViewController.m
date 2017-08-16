@@ -46,6 +46,16 @@
     }];
     [task async];
 }
+- (IBAction)loginWithVerifyCode:(id)sender {
+    DfthTask *task = [DfthSDKManager getLoginTaskWithTelNumber:_mobile.text verifyCode:_verifyCode.text completeHandler:^(DfthResult * _Nonnull result, NSString * _Nonnull userId) {
+        _log.text = result.description;
+        if (userId != nil) {
+            _log.text = [_log.text stringByAppendingString:userId];
+            [GlobleData sharedInstance].userId = userId;
+        }
+    }];
+    [task async];
+}
 
 /*
 #pragma mark - Navigation

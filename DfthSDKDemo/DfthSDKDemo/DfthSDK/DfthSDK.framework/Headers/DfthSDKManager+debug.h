@@ -17,8 +17,8 @@
 + (DfthBpPlan *)makeBpPlanByDayInterval:(int)dayInterval nigthInterval:(int)nigthInterval alarm:(int)alarmTime;
 + (DfthBpData *)parseBpDataBySbp:(int)sbp dbp:(int)dbp pulseRate:(int)pulseRate;
 
-+ (BOOL)insertBpDatas:(NSArray<DfthBpData *> *) datas;
-+ (BOOL)insertBpPlan:(DfthBpPlan *)plan;
++ (void)insertBpDatas:(NSArray<DfthBpData *> *) datas;
++ (void)insertBpPlan:(DfthBpPlan *)plan;
 
 + (DfthTask *)ecgDownloadFile:(DfthEcgRecord *)record suffix:(NSString *)suffix progress:(ProgressBlock)progress complete:(EcgDownloadFileBlock)complete;
 

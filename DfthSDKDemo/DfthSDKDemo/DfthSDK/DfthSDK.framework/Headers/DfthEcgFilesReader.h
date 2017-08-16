@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DfthEcgRecord.h"
+
 #import "ECGStorageResult.h"
 #import "Sport.h"
 
@@ -15,8 +15,8 @@
 
 - (instancetype _Nonnull)initForRecord:(DfthEcgRecord * _Nonnull)record;
 
-- (NSArray<NSNumber*> * _Nonnull)getEcgDataFrom:(int)start ofLength:(int)dataLen;
-- (NSUInteger)getEcgDataLength;
-- (NSArray<ECGStorageResult*> * _Nullable)getDatDataFrom:(int)start ofLength:(int)dataLen;
+- (NSArray<NSNumber*> * _Nonnull)getEcgDataFrom:(unsigned long long)start ofLength:(unsigned long long)dataLen;
+- (unsigned long long)getEcgDataLength;
+- (NSArray<ECGStorageResult*> * _Nullable)getDatDataFrom:(unsigned long long)start ofLength:(unsigned long long)dataLen;
 - (NSArray<Sport *> * _Nonnull)getAllSportState;
 @end

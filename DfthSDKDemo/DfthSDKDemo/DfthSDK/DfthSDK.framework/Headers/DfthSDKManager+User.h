@@ -53,7 +53,7 @@
 + (DfthTask*)getLoginTaskWithAccount:(NSString *)account password:(NSString *)password completeHandler:(LoginBlock)handler;
 
 /**
- * 用户注册
+ * 用户登录
  *
  * @param userId 用户id
  * @param handler 操作完成后的回调
@@ -61,6 +61,18 @@
  * @return DfthTask
  */
 + (DfthTask*)getLoginTaskWithUserId:(NSString *)userId completeHandler:(LoginBlock)handler;
+
+/**
+ * 用户登录
+ *
+ * @param telNumber 用户账号(即手机号)
+ * @param verifyCode 验证码
+ * @param handler 操作完成后的回调
+ *
+ * @return DfthTask
+ */
++ (DfthTask*)getLoginTaskWithTelNumber:(NSString *)telNumber verifyCode:(NSString *)verifyCode completeHandler:(LoginBlock)handler;
+
 
 /**
  * 重置密码时候的验证码
@@ -190,5 +202,12 @@
  * @return DfthTask
  */
 + (DfthTask *)getHabitDictionaryWithComplete:(HabitListBlock)handler;
+
+
+//用户头像上传下载
++ (DfthTask *)getUploadAvatarWith:(NSString *)userId filePath:(NSString *)filePath fileData:(NSData *)data complete:(SimpleBlock)handler;
++ (DfthTask *)getDownloadAvatarWith:(NSString *)userId filePath:(NSString *)filePath progress:(ProgressBlock)progress complete:(EcgDownloadFileBlock)handler;
+
++ (DfthTask*)accountPassTaskWithUserId:(NSString *)userId oldPass:(NSString *)oldPassword newPass:(NSString *)secondPassword completeHandler:(SimpleBlock)handler;
 
 @end

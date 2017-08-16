@@ -25,8 +25,6 @@ FOUNDATION_EXPORT const unsigned char DfthSDKVersionString[];
 #import "DfthSDKManager+Friends.h"
 #import "DfthSDKManager+Device.h"
 
-#import "DfthUser.h"
-
 #import "DfthBpDeviceDelegate.h"
 #import "DfthSingleEcgDelegate.h"
 #import "DfthTwelveEcgDelegate.h"
@@ -34,16 +32,32 @@ FOUNDATION_EXPORT const unsigned char DfthSDKVersionString[];
 #import "DfthSingleEcgDevice.h"
 #import "DfthTwelveEcgDevice.h"
 #import "DfthBpDevice.h"
-#import "DfthBpData.h"
-#import "DfthBpPlan.h"
-#import "DfthBpPlanResult.h"
+
 #import "DfthBpDeviceState.h"
 
 #import "DfthEcgFilesReader.h"
 #import "DfthPackage.h"
 
+#import "BaseArchiveObject.h"
+#import "BpAnalysisConfig.h"
+#import "BPConfig.h"
+#import "BpUploadConfig.h"
+#import "DeviceConfig.h"
+#import "DfthSDKConfig.h"
+#import "ECGAnalysisConfig.h"
+#import "ECGConfig.h"
+#import "ECGDownloadConfig.h"
+#import "ECGMeasureConfig.h"
+#import "ECGStorageConfig.h"
+#import "ECGTemplateConfig.h"
+#import "ECGUploadConfig.h"
+#import "EmergencyECGConfig.h"
+#import "OauthConfig.h"
+#import "PhysicalSymptomConfig.h"
 
+#import <DfthDB/DfthDB.h>
 #ifdef DEBUG
 #import "DfthSDKManager+debug.h"
+#import "DfthBpPlan+SDK.h"
 #else
 #endif

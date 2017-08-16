@@ -10,6 +10,8 @@
 #import "WaveView.h"
 #import "AppDelegate.h"
 
+#import "SingleResultViewController.h"
+
 @interface TweleveEcgController ()
 @property (strong, nonatomic) NSString *userId;
 @property (strong, nonatomic) DfthTask *getDeviceTask;
@@ -24,8 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    AppDelegate *app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//    self.userId = app.userId;
     _userId = [GlobleData sharedInstance].userId;
     
     [_waveView setShowLeadCount:3];
@@ -107,7 +107,7 @@
 
 - (IBAction)startMeasure:(id)sender {
     if (_ecgDevice) {
-        DfthTask *task = [_ecgDevice getStartMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_ecgDevice getStartMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始测量成功";
             }else{
@@ -117,9 +117,10 @@
         [task async];
     }
 }
+
 - (IBAction)startPlanMeasure:(id)sender {
     if (_ecgDevice) {
-        DfthTask *task = [_ecgDevice getStartMeasureTaskWithMeasureLength:24*60*60 CompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_ecgDevice getStartMeasureTaskWithMeasureLength:24*60*60 CompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始24定时测量成功";
             }else{
@@ -129,9 +130,10 @@
         [task async];
     }
 }
+
 - (IBAction)startTrialMeasure:(id)sender {
     if (_ecgDevice) {
-        DfthTask *task = [_ecgDevice getStartTrialMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_ecgDevice getStartTrialMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始体验测量成功";
             }else{
@@ -180,6 +182,10 @@
 
 - (void)handleMeasureResult:(DfthEcgRecord *)ecgRecord{
     _logView.text = [ecgRecord description];
+    
+    SingleResultViewController *resultVC = [[SingleResultViewController alloc] init];
+    resultVC.ecgRecord = ecgRecord;
+    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 - (void)onMeasureStopped{

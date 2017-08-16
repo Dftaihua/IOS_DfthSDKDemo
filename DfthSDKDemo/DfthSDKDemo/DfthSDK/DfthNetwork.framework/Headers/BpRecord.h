@@ -16,4 +16,8 @@
 @property(nonatomic, assign) int measureMode;
 @property(nonatomic, copy) NSString *mac;
 @property(nonatomic, copy) NSString *appid;
+#ifndef ZONE_DEV
+@property (nonatomic, strong) NSString *isExperience;
+@property (nonatomic, strong) NSString *timeZone;
+#endif
 @end

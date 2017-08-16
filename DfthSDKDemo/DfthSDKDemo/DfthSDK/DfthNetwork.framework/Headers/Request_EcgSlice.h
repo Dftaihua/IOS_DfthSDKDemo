@@ -26,10 +26,14 @@
 @property (nonatomic, copy) NSString *diseases;
 @property (nonatomic, assign) int64_t reportTime;
 @property (nonatomic, copy) NSString *symptom;
-@property (nonatomic, assign) int symptomLast;
+@property (nonatomic, assign) int64_t symptomLast;
 @property (nonatomic, assign) int type;
 @property (nonatomic, copy) NSString *appid;
 @property (nonatomic, copy) NSString *mac;
+#ifndef ZONE_DEV
+@property (nonatomic, strong) NSString *isExperience;
+@property (nonatomic, strong) NSString *timeZone;
+#endif
 @end
 
 @interface Request_FileMeta : NSObject

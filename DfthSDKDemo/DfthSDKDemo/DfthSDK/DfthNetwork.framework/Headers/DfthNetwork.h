@@ -51,6 +51,8 @@ FOUNDATION_EXPORT const unsigned char DfthNetworkVersionString[];
 #import "Request_GetFreePackages.h"
 #import "Request_MakeAnOrder.h"
 #import "Request_OrderConform.h"
+#import "Request_UserDeviceList.h"
+#import "Request_AccountPass.h"
 
 #import "Response_BpCreatePlan.h"
 #import "Response_BpGetPlan.h"
@@ -78,6 +80,8 @@ FOUNDATION_EXPORT const unsigned char DfthNetworkVersionString[];
 #import "Response_Package.h"
 #import "Response_MakeAnOrder.h"
 #import "Response_GetConfigFile.h"
+#import "Response_UserDeviceList.h"
+#import "Response_AccountPass.h"
 
 #import "Delegate_BpCreatePlan.h"
 #import "Delegate_BpGetPlan.h"
@@ -108,6 +112,8 @@ FOUNDATION_EXPORT const unsigned char DfthNetworkVersionString[];
 #import "Delegate_MakeAnOrder.h"
 #import "Delegate_OrderConform.h"
 #import "Delegate_GetConfigFile.h"
+#import "Delegate_UserDeviceList.h"
+#import "Delegate_AccountPass.h"
 
 //病史类和生活习惯类
 #import "Request_GetUserDiseaseList.h"
@@ -127,3 +133,12 @@ FOUNDATION_EXPORT const unsigned char DfthNetworkVersionString[];
 #import "Delegate_HabitCreate.h"
 #import "Delegate_HabitUpdate.h"
 #import "Delegate_GetHabitDictionary.h"
+
+#import "Request_UploadAFile.h"
+#import "Delegate_UploadAFile.h"
+#import "Request_DownloadAvatar.h"
+#import "Delegate_DownloadAvatar.h"
+
+
+#import "Request_EcgDeleteRecords.h"
+#import "Delegate_EcgDeleteRecords.h"

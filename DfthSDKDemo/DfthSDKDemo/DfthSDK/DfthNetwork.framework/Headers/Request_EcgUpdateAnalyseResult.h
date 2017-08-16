@@ -23,11 +23,16 @@
 @property (nonatomic, copy) NSString *symptom;
 @property (nonatomic, assign) int symptomLast;
 @property (nonatomic, copy) NSString *mac;
+#ifndef ZONE_DEV
+@property (nonatomic, strong) NSString *isExperience;
+@property (nonatomic, strong) NSString *timeZone;
+#endif
 @end
 
 @interface Request_EcgUpdateAnalyseResult : NSObject
 @property (nonatomic, copy) NSString *userId;
 @property (nonatomic, copy) NSString *recordId;
+
 
 @property (nonatomic, strong) Real_EcgUpdateAnalyseResult *request;
 @end

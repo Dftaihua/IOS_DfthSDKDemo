@@ -33,6 +33,11 @@
 #import "Delegate_MemberInfo.h"
 #import "Request_RegistVerifyCode.h"
 #import "Delegate_RegistVerifyCode.h"
+#import "Request_MemberLoginByVerifyCode.h"
+#import "Delegate_MemberLoginByVerifyCode.h"
+
+#import "Request_AccountPass.h"
+#import "Delegate_AccountPass.h"
 
 #import "Request_EcgSlice.h"
 #import "Delegate_EcgSlice.h"
@@ -54,6 +59,8 @@
 #import "Delegate_EcgDownloadZipFile.h"
 #import "Request_EcgDownloadFile.h"
 #import "Delegate_EcgDownloadFile.h"
+#import "Request_EcgDeleteRecords.h"
+#import "Delegate_EcgDeleteRecords.h"
 
 #import "Request_CreateTask.h"
 #import "Delegate_CreateTask.h"
@@ -65,6 +72,12 @@
 #import "Delegate_BpCreateRecords.h"
 #import "Request_BpGetPlan.h"
 #import "Delegate_BpGetPlan.h"
+#import "Request_NibpsList.h"
+#import "Delegate_NibpsList.h"
+#import "Request_AmbpsList.h"
+#import "Delegate_AmbpsList.h"
+#import "Request_AmbpsNibps.h"
+#import "Delegate_AmbpsNibps.h"
 
 #import "Request_GetUserDiseaseList.h"
 #import "Delegate_GetUserDiseaseList.h"
@@ -82,9 +95,28 @@
 #import "Delegate_GetHabitDictionary.h"
 
 
+#import "Request_UploadAFile.h"
+#import "Delegate_UploadAFile.h"
+#import "Request_DownloadAvatar.h"
+#import "Delegate_DownloadAvatar.h"
 
-#import "Request_FriendsList.h"
-#import "Delegate_FriendsList.h"
+//#import "Request_FriendsList.h"
+//#import "Delegate_FriendsList.h"
+#import "Request_FriendsCount.h"
+#import "Delegate_FriendCount.h"
+#import "Request_getMember.h"
+#import "Delegate_getMember.h"
+#import "Request_ApplyFriend.h"
+#import "Delegate_ApplyFriend.h"
+#import "Request_FindFriends.h"
+#import "Delegate_FindFriends.h"
+#import "Request_FindApplyList.h"
+#import "Delegate_FindApplyList.h"
+#import "Request_ApplyResult.h"
+#import "Delegate_ApplyResult.h"
+#import "Request_EditFriend.h"
+#import "Delegate_EditFriend.h"
+
 
 #import "Request_DeviceInfo.h"
 #import "Delegate_DeviceInfo.h"
@@ -94,6 +126,8 @@
 #import "Delegate_DeviceUnBind.h"
 #import "Request_DeviceBinding.h"
 #import "Delegate_DeviceBinding.h"
+#import "Request_UserDeviceList.h"
+#import "Delegate_UserDeviceList.h"
 
 #import "Request_GetFreePackages.h"
 #import "Delegate_GetFreePackages.h"
@@ -105,6 +139,7 @@
 
 #import "Delegate_GetConfigFile.h"
 #import "DfthNetStateDelegate.h"
+
  
 @interface DfthNetManager : NSObject
 
@@ -130,15 +165,24 @@
 + (DfthNetTask *)resetPasswordVerifyCode:(Request_ResetPasswordVerifyCode *)request delegate:(id<Delegate_ResetPasswordVerifyCode>)delegate;
 + (DfthNetTask *)memberInfo:(Request_MemberInfo *)request delegate:(id<Delegate_MemberInfo>)delegate;
 + (DfthNetTask *)registVerifyCode:(Request_RegistVerifyCode *)request delegate:(id<Delegate_RegistVerifyCode>)delegate;
++ (DfthNetTask *)memberLoginByVerifyCode:(Request_MemberLoginByVerifyCode *)request delegate:(id<Delegate_MemberLoginByVerifyCode>)delegate;
++ (DfthNetTask *)accountPass:(Request_AccountPass *)request delegate:(id<Delegate_AccountPassword>)delegate;
 
 #pragma mark 设备
 + (DfthNetTask *)deviceInfo:(Request_DeviceInfo *)request delegate:(id<Delegate_DeviceInfo>)delegate;
 + (DfthNetTask *)deviceList:(Request_DeviceList *)request delegate:(id<Delegate_DeviceList>)delegate;
 + (DfthNetTask *)deviceBind:(Request_DeviceBinding *)request delegate:(id<Delegate_DeviceBinding>)delegate;
 + (DfthNetTask *)deviceUnBind:(Request_DeviceUnBind *)request delegate:(id<Delegate_DeviceUnBind>)delegate;
-
++ (DfthNetTask *)userDeviceList:(Request_UserDeviceList *)request delegate:(id<Delegate_UserDeviceList>)delegate;
 #pragma mark 我的亲友部分
-+ (DfthNetTask *)friendsList:(Request_FriendsList *)request delegate:(id<Delegate_FriendsList>)delegate;
+//+ (DfthNetTask *)friendsList:(Request_FriendsList *)request delegate:(id<Delegate_FriendsList>)delegate;
++ (DfthNetTask *)friendsCount:(Request_FriendsCount *)request delegate:(id<Delegate_FriendCount>)delegate;
++ (DfthNetTask *)getmember:(Request_getMember *)request delegate:(id<Delegate_getMember>)delegate;
++ (DfthNetTask *)applyfriend:(Request_ApplyFriend *)request delegate:(id<Delegate_ApplyFriend>)delegate;
++ (DfthNetTask *)findfriends:(Request_FindFriends *)request delegate:(id<Delegate_FindFriends>)delegate;
++ (DfthNetTask *)findapplylist:(Request_FindApplyList *)request delegate:(id<Delegate_FindApplyList>)delegate;
++ (DfthNetTask *)applyResult:(Request_ApplyResult *)request delegate:(id<Delegate_ApplyResult>)delegate;
++ (DfthNetTask *)editfriend:(Request_EditFriend *)request delegate:(id<Delegate_EditFriend>)delegate;
 
 
 #pragma mark ECG
@@ -152,6 +196,7 @@
 + (DfthNetTask *)ecgGetServiceResult:(Request_EcgGetServiceResult *)request delegate:(id<Delegate_EcgGetServiceResult>)delegate;
 + (DfthNetTask *)ecgDownloadZipFile:(Request_EcgDownloadZipFile *)request progress:(void (^)(NSProgress *progress))progress delegate:(id<Delegate_EcgDownloadZipFile>)delegate;
 + (DfthNetTask *)ecgDownloadFile:(Request_EcgDownloadFile *)request progress:(void (^)(NSProgress *progress))progress delegate:(id<Delegate_EcgDownloadFile>)delegate;
++ (DfthNetTask *)ecgDeleteRecords:(Request_EcgDeleteRecords *)request delegate:(id<Delegate_EcgDeleteRecords>)delegate;
 
 #pragma mark BP
 + (DfthNetTask *)createTask:(Request_CreateTask *)request delegate:(id<Delegate_CreateTask>)delegate;
@@ -159,6 +204,10 @@
 + (DfthNetTask *)bpCreateRecords:(Request_BpCreateRecords *)request delegate:(id<Delegate_BpCreateRecords>)delegate;
 + (DfthNetTask *)bpCreatePlan:(Request_BpCreatePlan *)request delegate:(id<Delegate_BpCreatePlan>)delegate;
 + (DfthNetTask *)bpGetPlan:(Request_BpGetPlan *)request delegate:(id<Delegate_BpGetPlan>)delegate;
++ (DfthNetTask *)nibpsListRecord:(Request_NibpsList *)request delegate:(id<Delegate_NibpsList>)delegate;
++ (DfthNetTask *)ambpsListRecord:(Request_AmbpsList *)request delegate:(id<Delegate_AmbpsList>)delegate;
++ (DfthNetTask *)ambpsNibpsRecord:(Request_AmbpsNibps *)request delegate:(id<Delegate_AmbpsNibps>)delegate;
+
 
 
 #pragma mark 病史类和生活习惯类
@@ -171,6 +220,12 @@
 + (DfthNetTask *)habitCreate:(Request_HabitCreate *)request delegate:(id<Delegate_HabitCreate>)delegate;
 + (DfthNetTask *)habitUpdate:(Request_HabitUpdate *)request delegate:(id<Delegate_HabitUpdate>)delegate;
 + (DfthNetTask *)getHabitDictionaryWithDelegate:(id<Delegate_GetHabitDictionary>)delegate;
+
+
+#pragma mark  头像上传下载
++ (DfthNetTask *)getUploadAFile:(Request_UploadAFile *)request delegate:(id<Delegate_UploadAFile>)delegate;
++ (DfthNetTask *)getDownloadAdatar:(Request_DownloadAvatar *)request delegate:(id<Delegate_DownloadAvatar>)delegate;
+
 
 #pragma mark 费用相关
 + (DfthNetTask *)getFreePackages:(Request_GetFreePackages *)request delegate:(id<Delegate_GetFreePackages>)delegate;

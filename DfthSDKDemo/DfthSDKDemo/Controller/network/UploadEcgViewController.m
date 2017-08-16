@@ -127,6 +127,7 @@
     }];
     [task async];
 }
+
 - (IBAction)downloadZipFile:(id)sender {
     DfthEcgRecord *r = _records[[_index.text intValue]];
     _task = [DfthSDKManager ecgDownloadZipFile:r progress:^(NSProgress * _Nonnull progress) {
@@ -139,16 +140,18 @@
         }
     }];
     [_task async];
-
 }
+
 - (IBAction)deleteRecord:(id)sender {
     
     DfthEcgRecord *r = _records[[_index.text intValue]];
-    _task = [DfthSDKManager ecgDeleteRecord:r complete:^(DfthResult * _Nonnull result, DfthEcgRecord * _Nullable record) {
+    NSArray *records = [[NSArray alloc] initWithObjects:r, _records.lastObject, nil];
+    _task = [DfthSDKManager ecgDeleteRecords:records complete:^(DfthResult * _Nonnull result, NSMutableArray<DfthEcgRecord *> * _Nullable deletedRecords) {
+        NSLog(@"result=%@", result);
         if (result.code == DfthRC_Ok) {
-            _log.text = [NSString stringWithFormat:@"删除文件成功, %@", record];
+            _log.text = [NSString stringWithFormat:@"删除文件成功, %d", (int)deletedRecords.count];
         }else{
-            _log.text = [NSString stringWithFormat:@"删除文件失败：%@", result];
+            _log.text = [NSString stringWithFormat:@"删除文件失败：%d", (int)deletedRecords.count];
         }
     }];
     [_task async];
@@ -156,34 +159,34 @@
 
 - (IBAction)downloadIni:(id)sender {
     DfthEcgRecord *r = _records[[_index.text intValue]];
-    _task = [DfthSDKManager ecgDownloadFile:r suffix:@".ini" progress:^(NSProgress * _Nonnull progress) {
-        _log.text = [NSString stringWithFormat:@"正在下载ini文件:%f", progress.fractionCompleted];
-    } complete:^(DfthResult * _Nonnull result, NSString * _Nullable filePath){
-        if (result.code == DfthRC_Ok) {
-            _log.text = [NSString stringWithFormat:@"下载ini文件成功, %@", filePath];
-        }else{
-            _log.text = [NSString stringWithFormat:@"下载ini文件失败：%@", result];
-        }
-    }];
-    [_task async];
+//    _task = [DfthSDKManager ecgDownloadFile:r suffix:@".ini" progress:^(NSProgress * _Nonnull progress) {
+//        _log.text = [NSString stringWithFormat:@"正在下载ini文件:%f", progress.fractionCompleted];
+//    } complete:^(DfthResult * _Nonnull result, NSString * _Nullable filePath){
+//        if (result.code == DfthRC_Ok) {
+//            _log.text = [NSString stringWithFormat:@"下载ini文件成功, %@", filePath];
+//        }else{
+//            _log.text = [NSString stringWithFormat:@"下载ini文件失败：%@", result];
+//        }
+//    }];
+//    [_task async];
 }
 
 - (IBAction)downloadDat:(id)sender {
     DfthEcgRecord *r = _records[[_index.text intValue]];
-    _task = [DfthSDKManager ecgDownloadFile:r suffix:@".dat" progress:^(NSProgress * _Nonnull progress) {
-        _log.text = [NSString stringWithFormat:@"正在下载dat文件:%f", progress.fractionCompleted];
-    } complete:^(DfthResult * _Nonnull result, NSString * _Nullable filePath) {
-        if (result.code == DfthRC_Ok) {
-            _log.text = [NSString stringWithFormat:@"下载dat文件成功, %@", filePath];
-        }else{
-            _log.text = [NSString stringWithFormat:@"下载dat文件失败：%@", result];
-        }
-    }];
-    [_task async];
+//    _task = [DfthSDKManager ecgDownloadFile:r suffix:@".dat" progress:^(NSProgress * _Nonnull progress) {
+//        _log.text = [NSString stringWithFormat:@"正在下载dat文件:%f", progress.fractionCompleted];
+//    } complete:^(DfthResult * _Nonnull result, NSString * _Nullable filePath) {
+//        if (result.code == DfthRC_Ok) {
+//            _log.text = [NSString stringWithFormat:@"下载dat文件成功, %@", filePath];
+//        }else{
+//            _log.text = [NSString stringWithFormat:@"下载dat文件失败：%@", result];
+//        }
+//    }];
+//    [_task async];
 }
 - (IBAction)statistic:(id)sender {
     DfthEcgRecord *r = _records[[_index.text intValue]];
-    [DfthSDKManager statisticForRecord:r];
+//    [DfthSDKManager statisticForRecord:r];
 }
 
 /*

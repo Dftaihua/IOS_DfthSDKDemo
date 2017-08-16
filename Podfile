@@ -7,4 +7,6 @@ target 'DfthSDKDemo' do
     pod 'AFNetworking', '~> 3.0'
     pod 'SSZipArchive'
     pod 'MJExtension'
+    pod 'FMDB'
+    pod 'Masonry',                  '~> 0.5.3'
 end

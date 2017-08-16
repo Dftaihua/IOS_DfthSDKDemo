@@ -57,7 +57,7 @@
  *
  * @return 任务实例
  */
-- (DfthTask *)getStartMeasureTaskWithCompleteHandler:(SimpleBlock)handler;
+- (DfthTask *)getStartMeasureTaskWithCompleteHandler:(StartMeasureBlock)handler;
 
 /**
  *	获取开始定时测量的任务
@@ -67,7 +67,7 @@
  *
  * @return 任务实例
  */
-- (DfthTask *)getStartMeasureTaskWithMeasureLength:(int64_t)measureLength CompleteHandler:(SimpleBlock)handler;
+- (DfthTask *)getStartMeasureTaskWithMeasureLength:(int64_t)measureLength CompleteHandler:(StartMeasureBlock)handler;
 
 /**
  *	获取开始体验测量的任务
@@ -76,7 +76,7 @@
  *
  * @return 任务实例
  */
-- (DfthTask *)getStartTrialMeasureTaskWithCompleteHandler:(SimpleBlock)handler;
+- (DfthTask *)getStartTrialMeasureTaskWithCompleteHandler:(StartMeasureBlock)handler;
 
 /**
  *	获取停止测量的任务

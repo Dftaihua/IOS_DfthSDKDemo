@@ -13,6 +13,12 @@
 @property(nonatomic, assign) int line;
 @property(nonatomic, assign) int64_t measuringBegin;
 @property(nonatomic, copy) NSString *appid;
+@property(nonatomic, copy) NSString *mac;
+
+#ifndef ZONE_DEV
+@property (nonatomic, strong) NSString *isExperience;
+@property (nonatomic, strong) NSString *timeZone;
+#endif
 @end
 
 @interface Request_EcgCreateRecord : NSObject

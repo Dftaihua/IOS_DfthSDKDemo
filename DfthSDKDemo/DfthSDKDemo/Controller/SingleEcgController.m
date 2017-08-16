@@ -11,6 +11,10 @@
 #import "AppDelegate.h"
 #import <DfthUtilities/DfthUtilities.h>
 
+#import "SingleResultViewController.h"
+
+
+
 @interface SingleEcgController ()
 @property (strong, nonatomic) NSString *userId;
 @property (strong, nonatomic) DfthTask *getDeviceTask;
@@ -27,71 +31,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    AppDelegate *app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//    self.userId = app.userId;
     _userId = [GlobleData sharedInstance].userId;
     
     [_waveView setShowLeadCount:1];
     [_waveView setIsSingle:true];
-    
-}
 
-- (void)test{
-    NSString *path = [NSString stringWithFormat:@"%@/Documents/test.txt", NSHomeDirectory()];
-    
-    NSFileManager *fm = [NSFileManager defaultManager];
-    BOOL isexit = [fm fileExistsAtPath:path];
-    if (!isexit) {
-        NSLog(@"文件不存在！");
-    }else{
-//        [fm removeItemAtPath:path error:nil];
-//        [fm createFileAtPath:path contents:nil attributes:nil];
-        NSLog(@"文件存在");
-    }
-    [fm createFileAtPath:path contents:nil attributes:nil];
-    //
-    NSFileHandle *handle = [NSFileHandle fileHandleForWritingAtPath:path];
-    char buffer[] = {1,2,3,4,5,6};
-    NSMutableData *data = [[NSMutableData alloc] initWithBytes:buffer length:sizeof(buffer)];
-    [handle seekToEndOfFile];
-    [handle writeData:data];
-//    [handle synchronizeFile];
-    [handle closeFile];
-    
-    unsigned long long size = [self fileSize:path];
-    NSLog(@"path= %@", path);
-    NSLog(@"size = %lld", size);
-    
-    NSString *md5 = [FileMD5Utils getFileMD5WithPath:path];
-    NSLog(@"md5 = %@", md5);
-    
 }
-
-- (unsigned long long)fileSize:(NSString *)path
-{
-    // 总大小
-    unsigned long long size = 0;
-//    NSString *sizeText = nil;
-    NSFileManager *manager = [NSFileManager defaultManager];
-    
-    BOOL isDir = NO;
-    BOOL exist = [manager fileExistsAtPath:path isDirectory:&isDir];
-    
-    // 判断路径是否存在
-    if (!exist) return size;
-    if (isDir) { // 是文件夹
-        NSDirectoryEnumerator *enumerator = [manager enumeratorAtPath:path];
-        for (NSString *subPath in enumerator) {
-            NSString *fullPath = [path stringByAppendingPathComponent:subPath];
-            size += [manager attributesOfItemAtPath:fullPath error:nil].fileSize;
-            
-        }
-    }else{ // 是文件
-        size += [manager attributesOfItemAtPath:path error:nil].fileSize;
-    }
-    return size;
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -125,10 +70,6 @@
 }
 
 - (IBAction)showDeviceVersion:(id)sender {
-#if 0
-    [self test];
-#else
-    
     DfthTask *task = [_ecgDevice getDeviceVersionTaskWithCompleteHandler:^(DfthResult * _Nonnull result, NSString * _Nonnull version) {
         if (result.code == DfthRC_Ok) {
             _logView.text = [NSString stringWithFormat:@"设备版本：%@",[_ecgDevice version]];
@@ -137,7 +78,6 @@
         }
     }];
     [task async];
-#endif
 }
 
 - (IBAction)connect:(id)sender {
@@ -173,7 +113,7 @@
 
 - (IBAction)startMeasure:(id)sender {
     if (_ecgDevice) {
-        DfthTask *task = [_ecgDevice getStartMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_ecgDevice getStartMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始测量成功";
             }else{
@@ -187,7 +127,7 @@
 - (IBAction)startPlanMeasure:(id)sender {
     if (_ecgDevice) {
         //单位秒
-        DfthTask *task = [_ecgDevice getStartMeasureTaskWithMeasureLength:24*60*60 CompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_ecgDevice getStartMeasureTaskWithMeasureLength:24*60*60 CompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始24小时定时测量成功";
             }else{
@@ -197,9 +137,10 @@
         [task async];
     }
 }
+
 - (IBAction)startTrialMeasure:(id)sender {
     if (_ecgDevice) {
-        DfthTask *task = [_ecgDevice getStartTrialMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_ecgDevice getStartTrialMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始体验测量成功";
             }else{
@@ -224,14 +165,6 @@
 }
 
 - (IBAction)getMeasureRecord:(id)sender {
-#if 0
-    NSArray<DfthEcgRecord *> *list =  [DfthSDKManager getUser:self.userId ecgRecordsAtPage:0 whichContains:10];
-    NSString *str = [[NSString alloc] init];
-    for (int i = 0; i < list.count; i++) {
-        str = [str stringByAppendingString:[list[i] description]];
-    }
-    _logView.text = str;
-#else
     DfthTask *task = [DfthSDKManager getUser:self.userId pageIndex:1 pageSize:10 startTime:-1 endTime:-1 leadCount:1 sort:nil complete:^(DfthResult * _Nonnull result, BOOL isLastPage, NSArray<DfthEcgRecord *> * _Nullable recordArray) {
         if (result.code == DfthRC_Ok) {
             NSString *str = [[NSString alloc] init];
@@ -244,7 +177,6 @@
         }
     }];
     [task async];
-#endif
 }
 
 - (void)handleEcgData:(NSArray *)data leadOutFlag:(int)leadOutFlag heartRate:(int)heartRate isEmptyData:(BOOL)isEmpty
@@ -257,17 +189,16 @@
 
 - (void)handleMeasureResult:(DfthEcgRecord *)ecgRecord{
     NSLog(@"测量状态: 测量结果");
-
     _logView.text = [ecgRecord description];
+    
+    SingleResultViewController *resultVC = [[SingleResultViewController alloc] init];
+    resultVC.ecgRecord = ecgRecord;
+    [self.navigationController pushViewController:resultVC animated:YES];
 }
 
 - (void)onMeasureStopped{
     NSLog(@"测量状态: 测量结束");
 }
-//- (void)stateChangeFrom:(NSString *)previousState to:(NSString *)currentState{
-//    _logView.text = [NSString stringWithFormat:@"状态改变: %@ -> %@",  previousState, currentState];
-//    NSLog(@"状态改变: %@ -> %@",  previousState, currentState);
-//}
 
 - (void)connectState:(BOOL)isConnected measureState:(BOOL)isMeasuring{
     _logView.text = [NSString stringWithFormat:@"状态: connected=%d measuring=%d", isConnected, isMeasuring];

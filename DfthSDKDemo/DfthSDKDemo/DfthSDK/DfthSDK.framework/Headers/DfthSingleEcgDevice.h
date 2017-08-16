@@ -9,13 +9,14 @@
 #import "DfthDevice.h"
 #import "DfthSingleEcgDelegate.h"
 
-typedef NS_ENUM(NSUInteger, EcgMeasureMode) {
-    Manual = 0,
-    Plan,
-};
-
 #define ECG_MEASURE_FOREVEVER 0
 
+typedef NS_ENUM(NSUInteger, EcgMeasureMode) {
+    ECGMM_None = 0,
+    ECGMM_Manual,
+    ECGMM_Plan,
+    ECGMM_Trial,
+};
 
 @interface DfthSingleEcgDevice : DfthDevice
 @property (nonatomic, assign) double sampling;
@@ -23,7 +24,7 @@ typedef NS_ENUM(NSUInteger, EcgMeasureMode) {
 @property (nonatomic, assign) int leadCount;
 @property (nonatomic, assign) int leadOutFlag;
 @property (nonatomic, assign) EcgMeasureMode measureMode;
-@property (nonatomic, assign) int64_t measureLength;
+@property (nonatomic, assign) int64_t measureLength;    //单位秒
 @property (nonatomic, weak) id<DfthSingleEcgDelegate> dataDelegate;
 
 @end
