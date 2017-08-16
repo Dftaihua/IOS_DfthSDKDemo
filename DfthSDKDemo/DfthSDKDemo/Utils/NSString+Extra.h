@@ -23,7 +23,7 @@
 //+ (NSString *)getStringUseEcgRecordStartTime:(int64_t)startTime andEndTime:(int64_t)endTime;
 
 //+ (NSString *)getStringUseEcgRecordStartTime:(int64_t)startTime andMeasureTimes:(int64_t)measureTimes;
-+ (NSString *)getStringUseEcgRecordStartTime:(int64_t)startTime andMeasureTimes:(int64_t)measureTimes endTime:(int64_t)endTime;
+//+ (NSString *)getStringUseEcgRecordStartTime:(int64_t)startTime andMeasureTimes:(int64_t)measureTimes endTime:(int64_t)endTime;
 
 + (NSMutableAttributedString *)getNSMutableAttStrWithAllStr:(NSString *)allStr someStr:(NSString *)someStr addAttributes:(NSDictionary<NSString *, id> *)attrs;
 

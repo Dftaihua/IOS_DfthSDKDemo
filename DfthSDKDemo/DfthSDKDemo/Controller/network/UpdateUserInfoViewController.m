@@ -45,12 +45,12 @@
     _userName.text = [GlobleData sharedInstance].dfthUser.name;
     _gender.text = [NSString stringWithFormat:@"%d", [GlobleData sharedInstance].dfthUser.gender];
     _userTel.text = [GlobleData sharedInstance].dfthUser.telNumber;
-    _birthday.text = [NSString stringWithFormat:@"%ld", [GlobleData sharedInstance].dfthUser.birthday];
+    _birthday.text = [NSString stringWithFormat:@"%ld", (long)[GlobleData sharedInstance].dfthUser.birthday];
     _height.text = [NSString stringWithFormat:@"%d", [GlobleData sharedInstance].dfthUser.height];
     _weight.text = [NSString stringWithFormat:@"%d", [GlobleData sharedInstance].dfthUser.weight];
     _nation.text = [GlobleData sharedInstance].dfthUser.nation;
     
-    _zone.text = [NSString stringWithFormat:@"%d", [GlobleData sharedInstance].dfthUser.userZone];
+    _zone.text = [GlobleData sharedInstance].dfthUser.timeZone;
     _kindredName.text = [GlobleData sharedInstance].dfthUser.kindredName;
     _kindredNumber.text = [GlobleData sharedInstance].dfthUser.kindredNumber;
     _logView.text = @"初始化成功";
@@ -66,7 +66,7 @@
     user.height = [_height.text intValue];
     user.weight = [_weight.text intValue];
     user.nation = _nation.text;
-    user.userZone = [_zone.text intValue];
+    user.timeZone = _zone.text;
     user.kindredName = _kindredName.text;
     user.kindredNumber = _kindredNumber.text;
 }

@@ -11,4 +11,5 @@
 @interface NSString (File)
 - (unsigned long long)fileSize;
 - (NSString *)getDfthNetFileType;
+- (NSString *)getBussinessType;
 @end

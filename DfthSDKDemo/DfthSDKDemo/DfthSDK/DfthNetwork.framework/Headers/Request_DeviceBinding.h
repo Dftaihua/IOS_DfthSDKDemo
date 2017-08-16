@@ -12,6 +12,8 @@
 
 
 @property(nonatomic, copy) NSString *mId;
+@property(nonatomic, copy) NSString *devType;
+@property(nonatomic, copy) NSString *devVersion;
 @property(nonatomic, copy) NSString *macAddr;
 @property(nonatomic, copy) NSString *bindTime;
 @property(nonatomic, assign) int useTime;
@@ -19,7 +21,8 @@
 @property(nonatomic, copy) NSString *useAddrCity;
 
 
-- (instancetype)initWithMId:(NSString *)mId macAddr:(NSString *)macAddr bindTime:(NSString *)bindTime useTime:(int)useTime useAddrProvince:(NSString *)useAddrProvince useAddrCity:(NSString *)useAddrCity;
+
+- (instancetype)initWithMId:(NSString *)mId devType:(NSString *)devType devVersion:(NSString *)devVersion macAddr:(NSString *)macAddr bindTime:(NSString *)bindTime useTime:(int)useTime useAddrProvince:(NSString *)useAddrProvince useAddrCity:(NSString *)useAddrCity;
 
 
 

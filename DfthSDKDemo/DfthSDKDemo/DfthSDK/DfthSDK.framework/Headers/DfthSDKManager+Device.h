@@ -34,6 +34,8 @@
  * 为用户绑定设备
  *
  * @param userId 用户id
+ * @param devType 设备类型
+ * @param devVersion 设备版本号
  * @param mac 设备mac地址
  * @param bindTime 绑定时间
  * @param useTime 使用时间
@@ -43,7 +45,7 @@
  *
  * @return DfthTask
  */
-+ (DfthTask *)getDeviceBindTaskWith:(NSString *)userId macAddr:(NSString *)mac bindTime:(NSString *)bindTime useTime:(int)useTime useAddrProvince:(NSString *)useAddrProvince useAddrCity:(NSString *)useAddrCity completeHandler:(DeviceBindBlock)handler;
++ (DfthTask *)getDeviceBindTaskWith:(NSString *)userId devType:(NSString *)devType devVersion:(NSString *)devVersion macAddr:(NSString *)mac bindTime:(NSString *)bindTime useTime:(int)useTime useAddrProvince:(NSString *)useAddrProvince useAddrCity:(NSString *)useAddrCity completeHandler:(DeviceBindBlock)handler;
 
 /**
  * 为用户绑定设备
@@ -55,5 +57,17 @@
  * @return DfthTask
  */
 + (DfthTask *)getDeviceUnBindTaskWith:(NSString *)userId mac:(NSString *)mac completeHandler:(DeviceUnBindBlock)handler;
+
+
+
+/**
+ * 获取用户绑定的设备信息
+ *
+ * @param userId 用户id
+ * @param handler 操作完成后的回调
+ *
+ * @return DfthTask
+ */
++ (DfthTask *)getUserDevicelistTaskWith:(NSString *)userId completeHandler:(UserDevicelistBlock)handler;
 
 @end

@@ -21,8 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    AppDelegate *app = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//    self.userId = app.userId;
     _userId = [GlobleData sharedInstance].userId;
 }
 
@@ -82,7 +80,7 @@
 }
 - (IBAction)startMeasure:(id)sender {
     if (_device) {
-        DfthTask *task = [_device getStartMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_device getStartMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始测量成功";
             }else{
@@ -95,7 +93,7 @@
 }
 - (IBAction)startTrialMeasure:(id)sender {
     if (_device) {
-        DfthTask *task = [_device getStartTrialMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result) {
+        DfthTask *task = [_device getStartTrialMeasureTaskWithCompleteHandler:^(DfthResult * _Nonnull result, NSTimeInterval startTime) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"开始测量成功";
             }else{
@@ -150,7 +148,7 @@
 - (IBAction)setAPlan:(id)sender {
     if (_device) {
         int dayInterval = 30;
-        int nightInterval = 30;
+        int nightInterval = 60;
         DfthTask *task = [_device getMakePlanTaskWithDayInterval:dayInterval nightInterval:nightInterval alarmTime:30 completeHandler:^(DfthResult * _Nonnull result) {
             if (result.code == DfthRC_Ok) {
                 _logView.text = @"设置计划成功";
@@ -242,10 +240,6 @@
 - (void)bpMeasureFailed{
     _logView.text = @"测量失败";
 }
-
-//- (void)stateChangeFrom:(NSString *)previousState to:(NSString *)currentState{
-//    _logView.text = [NSString stringWithFormat:@"device state change from %@ to %@", previousState, currentState];
-//}
 
 - (void)connectState:(BOOL)isConnected measureState:(BOOL)isMeasuring{
     _logView.text = [NSString stringWithFormat:@"状态: connected=%d measuring=%d", isConnected, isMeasuring];

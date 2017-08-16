@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DfthEcgRecord.h"
+
 
 @protocol  DfthSingleEcgDelegate<NSObject>
 

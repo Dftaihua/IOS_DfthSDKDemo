@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DfthBpPlan.h"
+
 #import "DfthBpDeviceState.h"
-#import "DfthBpData.h"
+
 
 @protocol  DfthBpDeviceDelegate<NSObject>
 /**

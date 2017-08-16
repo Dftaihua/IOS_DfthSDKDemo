@@ -515,7 +515,6 @@
     
     _datArr = [_fileRead getDatDataFrom:_curDataNums ofLength:(int)_dataLen];
 
-     NSUInteger length = [_fileRead getEcgDataLength];
  
     _data = [_fileRead getEcgDataFrom:_curDataNums ofLength:(int)_dataLen];
     
@@ -540,8 +539,7 @@
     }
     
      [self setcurPosAndBaseline];
-    
-    NSLog(@"  setcurPosAndBaseline ");
+
     [self setNeedsDisplay];
 }
 - (void)removeAllHeartWave
@@ -599,7 +597,6 @@
 }
 - (void)setcurPosAndBaseline
 {
-     int n = _isSingle ? 1 : 12;
      for (int Group = 0; Group < _showLeadCount; Group++){
         
         if (ceil(_curPos[Group].x) >= ceil([self getWidth])) {

@@ -9,42 +9,30 @@
 /* Begin PBXBuildFile section */
 		0495CA3A1ECD8FAD0041B602 /* PlanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0495CA391ECD8FAD0041B602 /* PlanTableViewCell.m */; };
 		04D020FD1ECD700200CFC47C /* CALayer+ButtonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D020FC1ECD700200CFC47C /* CALayer+ButtonLayer.m */; };
-		7B262BFE1EEFE22900876AB4 /* BpAllTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B262BF71EEFE22900876AB4 /* BpAllTestController.m */; };
-		7B262BFF1EEFE22900876AB4 /* BPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B262BF91EEFE22900876AB4 /* BPDataController.m */; };
-		7B262C001EEFE22900876AB4 /* BPPlanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B262BFB1EEFE22900876AB4 /* BPPlanController.m */; };
-		7B262C011EEFE22900876AB4 /* BpSetDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B262BFD1EEFE22900876AB4 /* BpSetDataViewController.m */; };
-		7B27F2B41ECA9C31008E5254 /* GetConfigFileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27F2B31ECA9C31008E5254 /* GetConfigFileController.m */; };
 		7B2EA9C11ECD973800E8A538 /* BpDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2EA9C01ECD973800E8A538 /* BpDataCell.m */; };
-		7BBDDA091EF0C31700165A0F /* DfthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBDDA061EF0C31700165A0F /* DfthSDK.framework */; };
-		7BBDDA0A1EF0C31700165A0F /* DfthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBDDA071EF0C31700165A0F /* DfthUtilities.framework */; };
-		7BBDDA0C1EF0C33800165A0F /* DfthSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7BBDDA0B1EF0C33800165A0F /* DfthSDKResource.bundle */; };
-		7BBDDA101EF0CB9000165A0F /* DfthNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBDDA0F1EF0CB9000165A0F /* DfthNetwork.framework */; };
 		7BBDDA131EF0D01700165A0F /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBDDA121EF0D01700165A0F /* WaveView.m */; };
 		7BBDDA161EF0D1F500165A0F /* NSString+Extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBDDA151EF0D1F500165A0F /* NSString+Extra.m */; };
-		8EDB7DA3D53ED5A7C9C218BF /* libPods-DfthSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B69BDA7576135AC02B3CAA /* libPods-DfthSDKDemo.a */; };
-		9513F26E1E8B3DCE00AB84BB /* UploadEcgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9513F26D1E8B3DCE00AB84BB /* UploadEcgViewController.m */; };
-		9521DC301E84A881009B9EDA /* BindDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9521DC2F1E84A881009B9EDA /* BindDeviceViewController.m */; };
-		9534F9A21E88AB06000A743D /* OauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9534F9A11E88AB06000A743D /* OauthViewController.m */; };
-		95701A911E92832100396D31 /* MemberRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95701A901E92832100396D31 /* MemberRegistViewController.m */; };
-		95701A941E9299F400396D31 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95701A931E9299F400396D31 /* ResetPasswordViewController.m */; };
+		7BEB08A61F441E2E00E164CB /* DfthDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEB08A21F441E2E00E164CB /* DfthDB.framework */; };
+		7BEB08A71F441E2E00E164CB /* DfthNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEB08A31F441E2E00E164CB /* DfthNetwork.framework */; };
+		7BEB08A81F441E2E00E164CB /* DfthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEB08A41F441E2E00E164CB /* DfthSDK.framework */; };
+		7BEB08A91F441E2E00E164CB /* DfthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEB08A51F441E2E00E164CB /* DfthUtilities.framework */; };
+		8437CF871F00F385004C3C99 /* libPods-DfthSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B69BDA7576135AC02B3CAA /* libPods-DfthSDKDemo.a */; };
+		848766501F41A91100ABC131 /* SingleResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487664F1F41A91000ABC131 /* SingleResultViewController.m */; };
+		848766531F41A97C00ABC131 /* SportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848766521F41A97C00ABC131 /* SportView.m */; };
+		848766561F41A9C000ABC131 /* SingleResultDatasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848766551F41A9C000ABC131 /* SingleResultDatasView.m */; };
+		848766591F41AA1F00ABC131 /* EcgResultSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 848766581F41AA1F00ABC131 /* EcgResultSlider.m */; };
 		957FC0661E8357930015E459 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 957FC0651E8357930015E459 /* main.m */; };
 		957FC0691E8357930015E459 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 957FC0681E8357930015E459 /* AppDelegate.m */; };
 		957FC06F1E8357930015E459 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957FC06D1E8357930015E459 /* Main.storyboard */; };
 		957FC0711E8357930015E459 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 957FC0701E8357930015E459 /* Assets.xcassets */; };
 		957FC0741E8357930015E459 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 957FC0721E8357930015E459 /* LaunchScreen.storyboard */; };
 		957FC0801E8357CB0015E459 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 957FC07F1E8357CB0015E459 /* libstdc++.tbd */; };
-		95920C221EBC75050015B6F7 /* MoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95920C211EBC75050015B6F7 /* MoneyViewController.m */; };
-		959403101E8A11370041AAFC /* BpPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9594030F1E8A11370041AAFC /* BpPlanViewController.m */; };
 		95C98A251E83723E00C9347B /* SingleEcgController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C98A221E83723E00C9347B /* SingleEcgController.m */; };
 		95C98A2B1E8372CD00C9347B /* TweleveEcgController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C98A2A1E8372CD00C9347B /* TweleveEcgController.m */; };
 		95C98A2E1E8372DC00C9347B /* BPController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C98A2D1E8372DC00C9347B /* BPController.m */; };
 		95C98A311E8372EA00C9347B /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C98A301E8372EA00C9347B /* NetworkController.m */; };
 		95CA3D211E83763A00D2F8B8 /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CA3D201E83763A00D2F8B8 /* UIView+Category.m */; };
-		95CA3D251E83AC3100D2F8B8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CA3D241E83AC3100D2F8B8 /* LoginViewController.m */; };
 		95CA3D291E83AFD500D2F8B8 /* GlobleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CA3D281E83AFD500D2F8B8 /* GlobleData.m */; };
-		95CA3D2C1E83B1C000D2F8B8 /* GetUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CA3D2B1E83B1C000D2F8B8 /* GetUserInfoViewController.m */; };
-		95CA3D2F1E83C6D500D2F8B8 /* UpdateUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CA3D2E1E83C6D500D2F8B8 /* UpdateUserInfoViewController.m */; };
-		95E9A87E1EC1C52F002293CF /* DiseaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E9A87D1EC1C52F002293CF /* DiseaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,37 +43,25 @@
 		08B69BDA7576135AC02B3CAA /* libPods-DfthSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DfthSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E21C852EE35743852DD94B2 /* Pods-DfthSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfthSDKDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DfthSDKDemo/Pods-DfthSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		518C017E2F71B5A51D2E2C14 /* Pods-DfthSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DfthSDKDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DfthSDKDemo/Pods-DfthSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		7B262BF61EEFE22900876AB4 /* BpAllTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BpAllTestController.h; sourceTree = "<group>"; };
-		7B262BF71EEFE22900876AB4 /* BpAllTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BpAllTestController.m; sourceTree = "<group>"; };
-		7B262BF81EEFE22900876AB4 /* BPDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDataController.h; sourceTree = "<group>"; };
-		7B262BF91EEFE22900876AB4 /* BPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDataController.m; sourceTree = "<group>"; };
-		7B262BFA1EEFE22900876AB4 /* BPPlanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPPlanController.h; sourceTree = "<group>"; };
-		7B262BFB1EEFE22900876AB4 /* BPPlanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPPlanController.m; sourceTree = "<group>"; };
-		7B262BFC1EEFE22900876AB4 /* BpSetDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BpSetDataViewController.h; sourceTree = "<group>"; };
-		7B262BFD1EEFE22900876AB4 /* BpSetDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BpSetDataViewController.m; sourceTree = "<group>"; };
-		7B27F2B21ECA9C31008E5254 /* GetConfigFileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetConfigFileController.h; sourceTree = "<group>"; };
-		7B27F2B31ECA9C31008E5254 /* GetConfigFileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetConfigFileController.m; sourceTree = "<group>"; };
 		7B2EA9BF1ECD973800E8A538 /* BpDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BpDataCell.h; sourceTree = "<group>"; };
 		7B2EA9C01ECD973800E8A538 /* BpDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BpDataCell.m; sourceTree = "<group>"; };
-		7BBDDA061EF0C31700165A0F /* DfthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DfthSDK.framework; path = DfthSDKDemo/DfthSDK/DfthSDK.framework; sourceTree = "<group>"; };
-		7BBDDA071EF0C31700165A0F /* DfthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DfthUtilities.framework; path = DfthSDKDemo/DfthSDK/DfthUtilities.framework; sourceTree = "<group>"; };
-		7BBDDA0B1EF0C33800165A0F /* DfthSDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = DfthSDKResource.bundle; path = DfthSDKDemo/DfthSDK/DfthSDKResource.bundle; sourceTree = "<group>"; };
-		7BBDDA0F1EF0CB9000165A0F /* DfthNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DfthNetwork.framework; path = DfthSDKDemo/DfthSDK/DfthNetwork.framework; sourceTree = "<group>"; };
 		7BBDDA111EF0D01700165A0F /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
 		7BBDDA121EF0D01700165A0F /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		7BBDDA141EF0D1F500165A0F /* NSString+Extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extra.h"; sourceTree = "<group>"; };
 		7BBDDA151EF0D1F500165A0F /* NSString+Extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extra.m"; sourceTree = "<group>"; };
+		7BEB08A21F441E2E00E164CB /* DfthDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DfthDB.framework; path = DfthSDKDemo/DfthSDK/DfthDB.framework; sourceTree = "<group>"; };
+		7BEB08A31F441E2E00E164CB /* DfthNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DfthNetwork.framework; path = DfthSDKDemo/DfthSDK/DfthNetwork.framework; sourceTree = "<group>"; };
+		7BEB08A41F441E2E00E164CB /* DfthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DfthSDK.framework; path = DfthSDKDemo/DfthSDK/DfthSDK.framework; sourceTree = "<group>"; };
+		7BEB08A51F441E2E00E164CB /* DfthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DfthUtilities.framework; path = DfthSDKDemo/DfthSDK/DfthUtilities.framework; sourceTree = "<group>"; };
 		7BFBAB1D1ECEC0E600CA66C2 /* DfthSDKDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DfthSDKDemo.entitlements; sourceTree = "<group>"; };
-		9513F26C1E8B3DCE00AB84BB /* UploadEcgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadEcgViewController.h; sourceTree = "<group>"; };
-		9513F26D1E8B3DCE00AB84BB /* UploadEcgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadEcgViewController.m; sourceTree = "<group>"; };
-		9521DC2E1E84A881009B9EDA /* BindDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindDeviceViewController.h; sourceTree = "<group>"; };
-		9521DC2F1E84A881009B9EDA /* BindDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindDeviceViewController.m; sourceTree = "<group>"; };
-		9534F9A01E88AB06000A743D /* OauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OauthViewController.h; sourceTree = "<group>"; };
-		9534F9A11E88AB06000A743D /* OauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OauthViewController.m; sourceTree = "<group>"; };
-		95701A8F1E92832100396D31 /* MemberRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberRegistViewController.h; sourceTree = "<group>"; };
-		95701A901E92832100396D31 /* MemberRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberRegistViewController.m; sourceTree = "<group>"; };
-		95701A921E9299F400396D31 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
-		95701A931E9299F400396D31 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		8487664E1F41A91000ABC131 /* SingleResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleResultViewController.h; sourceTree = "<group>"; };
+		8487664F1F41A91000ABC131 /* SingleResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleResultViewController.m; sourceTree = "<group>"; };
+		848766511F41A97C00ABC131 /* SportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportView.h; sourceTree = "<group>"; };
+		848766521F41A97C00ABC131 /* SportView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportView.m; sourceTree = "<group>"; };
+		848766541F41A9C000ABC131 /* SingleResultDatasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleResultDatasView.h; sourceTree = "<group>"; };
+		848766551F41A9C000ABC131 /* SingleResultDatasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleResultDatasView.m; sourceTree = "<group>"; };
+		848766571F41AA1F00ABC131 /* EcgResultSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EcgResultSlider.h; sourceTree = "<group>"; };
+		848766581F41AA1F00ABC131 /* EcgResultSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EcgResultSlider.m; sourceTree = "<group>"; };
 		957FC0611E8357930015E459 /* DfthSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DfthSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		957FC0651E8357930015E459 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		957FC0671E8357930015E459 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,10 +72,6 @@
 		957FC0751E8357930015E459 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		957FC07F1E8357CB0015E459 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		957FC0821E8358270015E459 /* DfthSDKDemo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DfthSDKDemo.pch; sourceTree = "<group>"; };
-		95920C201EBC75050015B6F7 /* MoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyViewController.h; sourceTree = "<group>"; };
-		95920C211EBC75050015B6F7 /* MoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyViewController.m; sourceTree = "<group>"; };
-		9594030E1E8A11370041AAFC /* BpPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BpPlanViewController.h; sourceTree = "<group>"; };
-		9594030F1E8A11370041AAFC /* BpPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BpPlanViewController.m; sourceTree = "<group>"; };
 		95C98A211E83723E00C9347B /* SingleEcgController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleEcgController.h; sourceTree = "<group>"; };
 		95C98A221E83723E00C9347B /* SingleEcgController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleEcgController.m; sourceTree = "<group>"; };
 		95C98A291E8372CD00C9347B /* TweleveEcgController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweleveEcgController.h; sourceTree = "<group>"; };
@@ -110,16 +82,8 @@
 		95C98A301E8372EA00C9347B /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 		95CA3D1F1E83763A00D2F8B8 /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
 		95CA3D201E83763A00D2F8B8 /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
-		95CA3D231E83AC3100D2F8B8 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		95CA3D241E83AC3100D2F8B8 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		95CA3D271E83AFD500D2F8B8 /* GlobleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobleData.h; sourceTree = "<group>"; };
 		95CA3D281E83AFD500D2F8B8 /* GlobleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobleData.m; sourceTree = "<group>"; };
-		95CA3D2A1E83B1C000D2F8B8 /* GetUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoViewController.h; sourceTree = "<group>"; };
-		95CA3D2B1E83B1C000D2F8B8 /* GetUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoViewController.m; sourceTree = "<group>"; };
-		95CA3D2D1E83C6D500D2F8B8 /* UpdateUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateUserInfoViewController.h; sourceTree = "<group>"; };
-		95CA3D2E1E83C6D500D2F8B8 /* UpdateUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateUserInfoViewController.m; sourceTree = "<group>"; };
-		95E9A87C1EC1C52F002293CF /* DiseaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiseaseViewController.h; sourceTree = "<group>"; };
-		95E9A87D1EC1C52F002293CF /* DiseaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiseaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +91,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BBDDA101EF0CB9000165A0F /* DfthNetwork.framework in Frameworks */,
-				7BBDDA091EF0C31700165A0F /* DfthSDK.framework in Frameworks */,
-				7BBDDA0A1EF0C31700165A0F /* DfthUtilities.framework in Frameworks */,
+				7BEB08A61F441E2E00E164CB /* DfthDB.framework in Frameworks */,
+				7BEB08A71F441E2E00E164CB /* DfthNetwork.framework in Frameworks */,
+				7BEB08A81F441E2E00E164CB /* DfthSDK.framework in Frameworks */,
+				7BEB08A91F441E2E00E164CB /* DfthUtilities.framework in Frameworks */,
+				8437CF871F00F385004C3C99 /* libPods-DfthSDKDemo.a in Frameworks */,
 				957FC0801E8357CB0015E459 /* libstdc++.tbd in Frameworks */,
-				8EDB7DA3D53ED5A7C9C218BF /* libPods-DfthSDKDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,10 +163,10 @@
 		957FC07B1E8357BE0015E459 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7BBDDA0F1EF0CB9000165A0F /* DfthNetwork.framework */,
-				7BBDDA0B1EF0C33800165A0F /* DfthSDKResource.bundle */,
-				7BBDDA061EF0C31700165A0F /* DfthSDK.framework */,
-				7BBDDA071EF0C31700165A0F /* DfthUtilities.framework */,
+				7BEB08A21F441E2E00E164CB /* DfthDB.framework */,
+				7BEB08A31F441E2E00E164CB /* DfthNetwork.framework */,
+				7BEB08A41F441E2E00E164CB /* DfthSDK.framework */,
+				7BEB08A51F441E2E00E164CB /* DfthUtilities.framework */,
 				957FC07F1E8357CB0015E459 /* libstdc++.tbd */,
 				08B69BDA7576135AC02B3CAA /* libPods-DfthSDKDemo.a */,
 			);
@@ -211,9 +176,16 @@
 		95C98A201E83723E00C9347B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95CA3D221E83AC1D00D2F8B8 /* network */,
 				95C98A211E83723E00C9347B /* SingleEcgController.h */,
 				95C98A221E83723E00C9347B /* SingleEcgController.m */,
+				8487664E1F41A91000ABC131 /* SingleResultViewController.h */,
+				8487664F1F41A91000ABC131 /* SingleResultViewController.m */,
+				848766571F41AA1F00ABC131 /* EcgResultSlider.h */,
+				848766581F41AA1F00ABC131 /* EcgResultSlider.m */,
+				848766541F41A9C000ABC131 /* SingleResultDatasView.h */,
+				848766551F41A9C000ABC131 /* SingleResultDatasView.m */,
+				848766511F41A97C00ABC131 /* SportView.h */,
+				848766521F41A97C00ABC131 /* SportView.m */,
 				95C98A291E8372CD00C9347B /* TweleveEcgController.h */,
 				95C98A2A1E8372CD00C9347B /* TweleveEcgController.m */,
 				95C98A2C1E8372DC00C9347B /* BPController.h */,
@@ -242,45 +214,6 @@
 				0495CA391ECD8FAD0041B602 /* PlanTableViewCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		95CA3D221E83AC1D00D2F8B8 /* network */ = {
-			isa = PBXGroup;
-			children = (
-				7B262BF61EEFE22900876AB4 /* BpAllTestController.h */,
-				7B262BF71EEFE22900876AB4 /* BpAllTestController.m */,
-				7B262BF81EEFE22900876AB4 /* BPDataController.h */,
-				7B262BF91EEFE22900876AB4 /* BPDataController.m */,
-				7B262BFA1EEFE22900876AB4 /* BPPlanController.h */,
-				7B262BFB1EEFE22900876AB4 /* BPPlanController.m */,
-				7B262BFC1EEFE22900876AB4 /* BpSetDataViewController.h */,
-				7B262BFD1EEFE22900876AB4 /* BpSetDataViewController.m */,
-				95920C201EBC75050015B6F7 /* MoneyViewController.h */,
-				95920C211EBC75050015B6F7 /* MoneyViewController.m */,
-				95701A921E9299F400396D31 /* ResetPasswordViewController.h */,
-				95701A931E9299F400396D31 /* ResetPasswordViewController.m */,
-				95701A8F1E92832100396D31 /* MemberRegistViewController.h */,
-				95701A901E92832100396D31 /* MemberRegistViewController.m */,
-				9513F26C1E8B3DCE00AB84BB /* UploadEcgViewController.h */,
-				9513F26D1E8B3DCE00AB84BB /* UploadEcgViewController.m */,
-				9534F9A01E88AB06000A743D /* OauthViewController.h */,
-				9534F9A11E88AB06000A743D /* OauthViewController.m */,
-				95CA3D231E83AC3100D2F8B8 /* LoginViewController.h */,
-				95CA3D241E83AC3100D2F8B8 /* LoginViewController.m */,
-				95CA3D2A1E83B1C000D2F8B8 /* GetUserInfoViewController.h */,
-				95CA3D2B1E83B1C000D2F8B8 /* GetUserInfoViewController.m */,
-				95CA3D2D1E83C6D500D2F8B8 /* UpdateUserInfoViewController.h */,
-				95CA3D2E1E83C6D500D2F8B8 /* UpdateUserInfoViewController.m */,
-				9521DC2E1E84A881009B9EDA /* BindDeviceViewController.h */,
-				9521DC2F1E84A881009B9EDA /* BindDeviceViewController.m */,
-				9594030E1E8A11370041AAFC /* BpPlanViewController.h */,
-				9594030F1E8A11370041AAFC /* BpPlanViewController.m */,
-				95E9A87C1EC1C52F002293CF /* DiseaseViewController.h */,
-				95E9A87D1EC1C52F002293CF /* DiseaseViewController.m */,
-				7B27F2B21ECA9C31008E5254 /* GetConfigFileController.h */,
-				7B27F2B31ECA9C31008E5254 /* GetConfigFileController.m */,
-			);
-			path = network;
 			sourceTree = "<group>";
 		};
 		95CA3D261E83AFBA00D2F8B8 /* Utils */ = {
@@ -366,7 +299,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BBDDA0C1EF0C33800165A0F /* DfthSDKResource.bundle in Resources */,
 				957FC0741E8357930015E459 /* LaunchScreen.storyboard in Resources */,
 				957FC0711E8357930015E459 /* Assets.xcassets in Resources */,
 				957FC06F1E8357930015E459 /* Main.storyboard in Resources */,
@@ -430,33 +362,21 @@
 			files = (
 				95CA3D291E83AFD500D2F8B8 /* GlobleData.m in Sources */,
 				95C98A251E83723E00C9347B /* SingleEcgController.m in Sources */,
-				95701A911E92832100396D31 /* MemberRegistViewController.m in Sources */,
-				7B262BFF1EEFE22900876AB4 /* BPDataController.m in Sources */,
 				95C98A2E1E8372DC00C9347B /* BPController.m in Sources */,
 				04D020FD1ECD700200CFC47C /* CALayer+ButtonLayer.m in Sources */,
 				957FC0691E8357930015E459 /* AppDelegate.m in Sources */,
-				7B27F2B41ECA9C31008E5254 /* GetConfigFileController.m in Sources */,
-				95701A941E9299F400396D31 /* ResetPasswordViewController.m in Sources */,
-				9534F9A21E88AB06000A743D /* OauthViewController.m in Sources */,
-				9521DC301E84A881009B9EDA /* BindDeviceViewController.m in Sources */,
 				957FC0661E8357930015E459 /* main.m in Sources */,
-				9513F26E1E8B3DCE00AB84BB /* UploadEcgViewController.m in Sources */,
 				95C98A311E8372EA00C9347B /* NetworkController.m in Sources */,
-				95920C221EBC75050015B6F7 /* MoneyViewController.m in Sources */,
 				7BBDDA131EF0D01700165A0F /* WaveView.m in Sources */,
-				95CA3D251E83AC3100D2F8B8 /* LoginViewController.m in Sources */,
+				848766561F41A9C000ABC131 /* SingleResultDatasView.m in Sources */,
+				848766591F41AA1F00ABC131 /* EcgResultSlider.m in Sources */,
+				848766501F41A91100ABC131 /* SingleResultViewController.m in Sources */,
 				95C98A2B1E8372CD00C9347B /* TweleveEcgController.m in Sources */,
-				7B262C001EEFE22900876AB4 /* BPPlanController.m in Sources */,
-				95CA3D2C1E83B1C000D2F8B8 /* GetUserInfoViewController.m in Sources */,
 				95CA3D211E83763A00D2F8B8 /* UIView+Category.m in Sources */,
-				95CA3D2F1E83C6D500D2F8B8 /* UpdateUserInfoViewController.m in Sources */,
 				7BBDDA161EF0D1F500165A0F /* NSString+Extra.m in Sources */,
-				7B262C011EEFE22900876AB4 /* BpSetDataViewController.m in Sources */,
+				848766531F41A97C00ABC131 /* SportView.m in Sources */,
 				0495CA3A1ECD8FAD0041B602 /* PlanTableViewCell.m in Sources */,
 				7B2EA9C11ECD973800E8A538 /* BpDataCell.m in Sources */,
-				95E9A87E1EC1C52F002293CF /* DiseaseViewController.m in Sources */,
-				959403101E8A11370041AAFC /* BpPlanViewController.m in Sources */,
-				7B262BFE1EEFE22900876AB4 /* BpAllTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +423,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -550,6 +471,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

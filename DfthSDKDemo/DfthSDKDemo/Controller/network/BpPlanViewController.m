@@ -37,7 +37,6 @@
     }
 }
 - (IBAction)uploadPlan:(id)sender {
-    DfthBpPlan *plan = [_plans objectAtIndex:[_recordIndex.text intValue]];
     DfthTask *task = [DfthSDKManager uploadAllBpPlanForUser:[GlobleData sharedInstance].userId complete:^(DfthResult * _Nonnull result, NSArray<DfthBpPlan *> * _Nullable plans) {
         if (result.code == DfthRC_Ok) {
             _log.text = [NSString stringWithFormat:@"上传成功:\n%@", plans];

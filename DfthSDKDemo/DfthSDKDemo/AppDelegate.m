@@ -18,6 +18,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
+    //注册异常和信号捕获
+    [ExceptionUtils installUncaughtExceptionHandler];
+    [ExceptionUtils InstallSignalHandler];
+    
     [self initDfthSDK];
     
     return YES;

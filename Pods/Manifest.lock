@@ -22,21 +22,29 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.1.0):
     - CocoaLumberjack/Default
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - Masonry (0.5.3)
   - MJExtension (3.0.13)
   - SSZipArchive (1.6.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - CocoaLumberjack
+  - FMDB
+  - Masonry (~> 0.5.3)
   - MJExtension
   - SSZipArchive
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaLumberjack: d6627e7ad42e14d41a4fa2e6c7ae42489d5f3e8b
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Masonry: 9f515466afe48632562342a40a1c224071a1a022
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   SSZipArchive: 428eb1ac8d37dd133404d30f422b23958c1f9acc
 
-PODFILE CHECKSUM: e49e9d267748c42961124f88d199fe8b94f54527
+PODFILE CHECKSUM: 3a4c07fbd9e1e70c99de14f49728385b96342400
 
 COCOAPODS: 1.2.1

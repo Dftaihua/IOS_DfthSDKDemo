@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Disease : NSObject
+@interface Disease : NSObject <NSCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *code;
+@property (nonatomic, assign) short hType;
 
-- (instancetype)initWithName:(NSString *)name code:(NSString *)code;
+- (instancetype)initWithName:(NSString *)name code:(NSString *)code type:(short)hType;
 
 @end

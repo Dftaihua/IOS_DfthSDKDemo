@@ -37,4 +37,9 @@
 @property (nonatomic, copy) NSString *status;   //医师分析状态码
 @property (nonatomic, assign) int64_t statusModify;
 @property (nonatomic, copy) NSString *w_no;   //医师工号
+
+#ifndef ZONE_DEV
+@property (nonatomic, strong) NSString *isExperience;
+@property (nonatomic, strong) NSString *timeZone;
+#endif
 @end

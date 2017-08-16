@@ -87,8 +87,8 @@
  *
  * @return DfthTask
  */
-+ (DfthTask *)ecgDeleteRecord:(DfthEcgRecord *)record complete:(EcgRecordBlock)complete;
-
+//+ (DfthTask *)ecgDeleteRecord:(DfthEcgRecord *)record complete:(EcgRecordBlock)complete;
++ (DfthTask *)ecgDeleteRecords:(NSArray<DfthEcgRecord*> *)records complete:(EcgDeleteRecordBlock)complete;
 /**
  * 删除所有本地存储的心电文件，只删除已经上传到服务器的文件
  *

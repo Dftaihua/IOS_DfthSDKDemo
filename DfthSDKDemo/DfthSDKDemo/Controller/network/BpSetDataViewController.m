@@ -19,7 +19,7 @@
 @property (nonatomic, assign) NSInteger createTime;
 @property (nonatomic, strong) DfthBpPlan *plan;
 
-@property (nonatomic, strong) NSMutableArray <NSArray *> *allDatas;
+@property (nonatomic, strong) NSMutableArray <NSMutableArray *> *allDatas;
 @property (nonatomic, strong) NSMutableArray <NSString *> *alltimeDatas;
 
 @end

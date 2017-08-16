@@ -8,6 +8,7 @@
 
 #import "BpAllTestController.h"
 #import "BpDataCell.h"
+#import "GlobleData.h"
 
 @interface BpAllTestController ()
 @property (weak, nonatomic) IBOutlet UIDatePicker *timePicker;
@@ -48,7 +49,7 @@
     [_datas removeAllObjects];
     short *schedules = [_plan getSchedules];
     for (int i = 0; i < _plan.totalCount; i++) {
-        DfthBpData *data = [[DfthBpData alloc] initWith:[GlobleData sharedInstance].userId deviceMac:[GlobleData sharedInstance].device.mac measureMode:BPMM_Plan index:i measureTime:(_plan.createTime + schedules[i]*60) sbp:120 dbp:60 pulseRate:80 appId:[GlobleData sharedInstance].clientId];
+        DfthBpData *data = [[DfthBpData alloc] initWith:[GlobleData sharedInstance].userId deviceMac:[GlobleData sharedInstance].device.mac measureMode:BPMM_Plan index:i measureTime:(_plan.planCreateTime + schedules[i]*60) sbp:120 dbp:60 pulseRate:80 appId:[GlobleData sharedInstance].clientId];
         [_datas addObject:data];
     }
     
@@ -64,22 +65,21 @@
     }
     [_datas removeAllObjects];
 #endif
-    BOOL ok = true;
 #ifdef DEBUG
-    ok &= [DfthSDKManager insertBpDatas:_datas];
-    ok &= [DfthSDKManager insertBpPlan:_plan];
-    _log.text = (ok ? @"写入成功" : @"写入失败");
+    [DfthSDKManager insertBpDatas:_datas];
+    [DfthSDKManager insertBpPlan:_plan];
+    _log.text = @"写入成功";
 #else
     _log.text = @"非debug模式不支持此操作";
 #endif
-}
+} 
 
 - (IBAction)uploadBpDatas:(id)sender {
     DfthTask *task = [DfthSDKManager uploadAllBpDataForUser:[GlobleData sharedInstance].userId complete:^(DfthResult * _Nonnull result, NSArray<DfthBpData *> * _Nullable datas) {
         NSLog(@"result=%@", result.description);
         if (result.code == DfthRC_Ok) {
             _log.text = @"上传数据成功";
-            [_plan makePlanFinish];
+//            [_plan makePlanFinish];
         }else{
             _log.text = [NSString stringWithFormat:@"失败：%@", result.description];
         }
@@ -89,12 +89,13 @@
 }
 
 - (IBAction)uploadBpPlan:(id)sender {
+#if 0
     DfthTask *task = [DfthSDKManager uploadBpPlan:_plan complete:^(DfthResult * _Nonnull result, DfthBpPlan * _Nullable plan) {
         NSLog(@"result=%@", result.description);
         if (result.code == DfthRC_Ok) {
-            NSString *stander = plan.planResult.standard==0?@"未达标":@"达标";
+            NSString *stander = plan.standard==0?@"未达标":@"达标";
             NSString *pattern;
-            switch (plan.planResult.pattern) {
+            switch (plan.pattern) {
                 case 1:
                     pattern = @"杓型";
                     break;
@@ -116,6 +117,10 @@
         }
     }];
     
+    [task async];
+#endif
+    DfthTask *task = [DfthSDKManager uploadAllBpPlanForUser:[GlobleData sharedInstance].userId complete:^(DfthResult * _Nonnull result, NSArray<DfthBpPlan *> * _Nullable plans) {
+    }];
     [task async];
 }
 

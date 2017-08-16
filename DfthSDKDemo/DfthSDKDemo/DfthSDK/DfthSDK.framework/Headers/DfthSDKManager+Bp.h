@@ -21,6 +21,8 @@
  */
 + (NSArray<DfthBpPlan*> *)getUser:(NSString *)userId bpPlansAtPage:(int)pageNo whichContains:(int)howManyItems;
 
++ (DfthTask *)getBpPlanWithUser:(NSString *)userId pageIndex:(int)pageIndex pageSize:(int)pageSize startTime:(int64_t)startTime endTime:(int64_t)endTime sort:(NSString *)sort complete:(BpPlansBlock)handler;
+
 /**
  * 查询血压测量数据
  *
@@ -33,7 +35,7 @@
  * @return 返回符合查询条件的数据集合
  */
 + (NSArray<DfthBpData*> *)getUser:(NSString *)userId bpDatasOfMeasureMode:(int)mode whichMeasuredBetween:(int64_t)startTime and:(int64_t)endTime;
-
++ (DfthTask *)getBpDataWithUser:(NSString *)userId pageIndex:(int)pageIndex pageSize:(int)pageSize startTime:(int64_t)startTime endTime:(int64_t)endTime sort:(NSString *)sort complete:(BpDataBlock)handler;
 
 /**
  * 上传所有血压数据到服务器
@@ -64,5 +66,12 @@
  * @return DfthTask
  */
 + (DfthTask *)uploadBpPlan:(DfthBpPlan *)plan complete:(UploadBpPlan)complete;
+
+
++ (DfthTask *)getNibpsListWithUser:(NSString *)userId pageIndex:(int)pageIndex pageSize:(int)pageSize startTime:(int64_t)startTime endTime:(int64_t)endTime sort:(NSString *)sort complete:(BpDataBlock)handler;
+
++ (DfthTask *)getAmbpsListWithUser:(NSString *)userId pageIndex:(int)pageIndex pageSize:(int)pageSize startTime:(int64_t)startTime endTime:(int64_t)endTime sort:(NSString *)sort complete:(BpPlansBlock)handler;
+
++ (DfthTask *)getAmbpsNibpsWithUser:(NSString *)userId planId:(NSString *)planId complete:(AmbpsNibpsList)handler;
 
 @end

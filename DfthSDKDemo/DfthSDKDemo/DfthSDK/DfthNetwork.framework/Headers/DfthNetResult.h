@@ -13,7 +13,8 @@ typedef NS_ENUM (NSInteger, DfthNetCode)
     Net_Ok = 0,
     Net_Error,
     Net_NoNet,
-    Net_ServiceError
+    Net_ServiceError,
+    Net_NOEcg,
 };
 
 @interface DfthNetPage : NSObject
@@ -36,5 +37,8 @@ typedef NS_ENUM (NSInteger, DfthNetCode)
 +(DfthNetResult *)defaultError;
 +(DfthNetResult *)defaultNoNet;
 +(DfthNetResult *)defaultServerError;
+
+// 周素华add
++(DfthNetResult *)defaultNOEcg;
 
 @end
